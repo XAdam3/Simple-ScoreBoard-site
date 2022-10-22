@@ -1,34 +1,54 @@
-<html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <div class="container">
-            <h3 id="Home">TEAM 1</h3>
-            <div id= "Homebox">
-            </div>
-            <div id="home-points">0</div>
-            <div id="btns-home">
-                <button id="home-btn-1" onclick="addOnehome()">+1</button>
-                <button id="home-btn-2" onclick="addTwohome()">+2</button>
-                <button id="home-btn-3" onclick="addThreehome()">+3</button>
-            </div>
-            <h3 id= "Guest">TEAM 2</h3>
-            <div id="Guestbox">
-            </div>
-            <div id="guest-points">0</div>
-            <div id="btns-guest">
-                <button id="guest-btn-1" onclick="addOneguest()">+1</button>
-                <button id="guest-btn-2" onclick="addTwoguest()">+2</button>
-                <button id="guest-btn-3" onclick="addThreeguest()">+3</button>
-            </div>
-             <p class="mess"></p>
-             <div class="btns">
-                <button id="btn-new" onclick="zerOhome()">Home Game</button>
-                <button id="btn-end" onclick="zerOguest()">Guest Game</button>
-             </div>
-            
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Dev Adam Simple Scoreboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="titles">
+        <h3 id="title-home-guest">Home</h3>
+        <h3 id="title-home-guest">Guest</h3>
+      </div>
+
+      <div class="boxes">
+        <div id="box">
+          <h1 class="home-guest-points" id="home-points">0</h1>
         </div>
-        <script src="index.js"></script>
-    </body>
+        <div id="box">
+          <h1 class="home-guest-points" id="guest-points">0</h1>
+        </div>
+      </div>
+      <div id="btns-container">
+        <div id="add-boxes">
+          <div id="home-guest">
+            <button id="home-guest-btns" onclick="addOneHome()">+1</button>
+            <button id="home-guest-btns" onclick="addTwoHome()">+2</button>
+            <button id="home-guest-btns" onclick="addThreeHome()">+3</button>
+          </div>
+
+          <div id="home-guest">
+            <button id="home-guest-btns" onclick="addOneGuest()">+1</button>
+            <button id="home-guest-btns" onclick="addTwoGuest()">+2</button>
+            <button id="home-guest-btns" onclick="addThreeGuest()">+3</button>
+          </div>
+        </div>
+
+        <div id="reset-btns">
+          <div id="btn-box-reset">
+            <button id="btn-reset" onclick="zeroHome()">Reset Home</button>
+          </div>
+          <div id="btn-box-reset">
+            <button id="btn-reset" onclick="zeroGuest()">Reset Guest</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>
